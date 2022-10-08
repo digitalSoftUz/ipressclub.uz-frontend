@@ -1,0 +1,112 @@
+.Address {
+  color: white;
+}
+
+#aloqa {
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+}
+
+#hamkorlar {
+  -webkit-transform: translateY(-120px);
+          transform: translateY(-120px);
+}
+
+.maps-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 64px;
+}
+
+.maps-wrapper__left iframe {
+  border: none;
+  max-width: 600;
+  height: 450px;
+}
+
+.maps-wrapper__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.address-info {
+  margin: 61px auto 50px auto;
+  max-width: 898px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.address-info div {
+  text-align: center;
+}
+
+.address-info div h4 {
+  margin-top: 10px;
+  margin-bottom: 6px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #333333;
+}
+
+.address-info div p, .address-info div a {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: #333333;
+  text-decoration: none;
+}
+
+@media (max-width: 1300px) {
+  .maps-wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .maps-iframe {
+    width: 90vw;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .maps-wrapper__right {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .maps-wrapper__right {
+    width: 90vw;
+    margin: 0 auto;
+  }
+  .maps-wrapper__right img {
+    width: 33%;
+  }
+}
+
+@media (max-width: 600px) {
+  .address-info {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .address-info div {
+    margin: 10px 0;
+  }
+}

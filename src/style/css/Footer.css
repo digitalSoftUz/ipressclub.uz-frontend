@@ -1,0 +1,131 @@
+.footer {
+  background-color: #262A33;
+  background-image: url("../../assets/icons/footer_logo.png");
+  background-repeat: no-repeat;
+  background-position: left bottom -30px;
+  padding-top: 67px;
+}
+
+.footer-container {
+  max-width: 1281px;
+  margin: 0 auto;
+  padding: 0 50px 30px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer-info {
+  max-width: 531px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 197.19%;
+}
+
+.footer-list {
+  list-style-type: none;
+  color: #fff;
+  width: 197px;
+  line-height: 197.19%;
+}
+
+.footer-list li {
+  text-align: center;
+}
+
+.footer-list li a {
+  color: #fff;
+}
+
+.footer-icon {
+  width: 141px;
+}
+
+.footer-lan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-lan button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 17.0127px;
+  line-height: 197.19%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.footer-icon-group {
+  margin-bottom: 20px;
+}
+
+.footer-icon-group div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+
+.footer-icon-group div a img {
+  width: 45px;
+}
+
+.footer-input {
+  position: relative;
+}
+
+.footer-input input {
+  width: 134px;
+  height: 22px;
+  background: #FFFFFF;
+  border-radius: 2px;
+}
+
+.footer-input img {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+.footer span {
+  display: block;
+  background-color: #1B1E25;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+}
+
+.lang_active {
+  border-bottom: 2px solid #FFFFFF !important;
+}
+
+@media (max-width: 900px) {
+  .footer-container {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .footer-container p, .footer-container ul, .footer-container div {
+    margin-bottom: 20px;
+  }
+}
