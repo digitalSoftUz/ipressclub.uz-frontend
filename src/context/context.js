@@ -24,8 +24,8 @@ class Mode extends Component {
       singlenews:[],
       Pcategory: [],
       Regions: [],
-      Fcategory:null,
-      Lcategory:null,
+      Fcategory:{},
+      Lcategory:{},
     }
   }
   componentDidMount() {
@@ -41,12 +41,6 @@ class Mode extends Component {
       .then((res) => {
         const lenta = res.data;
         this.setState({ lenta: lenta });
-      }
-    )
-    axios.get(`${baseUrl}/api/news/`)
-      .then((res) => {
-        const news4 = res.data;
-        this.setState({ news4: news4 });
       }
     )
     axios.get(`${baseUrl}/api/news/all/`)
@@ -85,41 +79,59 @@ class Mode extends Component {
         this.setState({ Regions: Regions });
       }
     )
-    axios.get(`${baseUrl}/api/category/`)
-    .then((res) => {
-      const category = res.data;
-      this.setState({ 
-        Lcategory: category[0].id,
-        Fcategory: category[1].id
-      });
-      setTimeout(() => {
-        this.handleFnews()
-        this.handleLnews()
-      }, 200);
+    // axios.get(`${baseUrl}/api/news/`)
+    //   .then((res) => {
+    //     const news4 = res.data;
+    //     this.setState({ news4: news4 });
+    //   }
+    // )
+    // axios.get(`${baseUrl}/api/category/`)
+    // .then((res) => {
+    //   const category = res.data;
+    //   this.setState({ 
+    //     Lcategory: category[0].id,
+    //     Fcategory: category[1].id
+    //   });
+    //   setTimeout(() => {
+    //     this.handleFnews()
+    //     this.handleLnews()
+    //   }, 200);
       
-    })
+    // })
+    axios.get(`${baseUrl}/api/category/new/`)
+    .then((res) => {
+      const data = res.data;
+      this.setState({ 
+        Lnews: data.left,
+        Lcategory: data.left[0].category,
+        news4: data.middle,
+        Fnews: data.right,
+        Fcategory: data.right[0].category,
+      });
+    }
+  )
   }
   componentWillUnmount() {
     window.removeEventListener('scroll', this.listenToScroll)
   }
-  handleLnews = () =>{
-    if (this.state.Lcategory !== null) {
-      axios.get(`${baseUrl}/api/news/by/category/${this.state.Lcategory}/`)
-        .then((res) => {
-          const Lnews = res.data;
-          this.setState({ Lnews: Lnews });
-        })
-      }
-    }
-   handleFnews = () =>{
-    if (this.state.Fcategory !== null) {
-      axios.get(`${baseUrl}/api/news/by/category/${this.state.Fcategory}/`)
-        .then((res) => {
-          const Fnews = res.data;
-          this.setState({ Fnews: Fnews });
-        })
-      }
-    }
+  // handleLnews = () =>{
+  //   if (this.state.Lcategory !== null) {
+  //     axios.get(`${baseUrl}/api/news/by/category/${this.state.Lcategory}/`)
+  //       .then((res) => {
+  //         const Lnews = res.data;
+  //         this.setState({ Lnews: Lnews });
+  //       })
+  //     }
+  //   }
+  //  handleFnews = () =>{
+  //   if (this.state.Fcategory !== null) {
+  //     axios.get(`${baseUrl}/api/news/by/category/${this.state.Fcategory}/`)
+  //       .then((res) => {
+  //         const Fnews = res.data;
+  //         this.setState({ Fnews: Fnews });
+  //       })
+  //     }
+  //   }
   listenToScroll = () => {
     const winScroll =  document.body.scrollTop || document.documentElement.scrollTop
 

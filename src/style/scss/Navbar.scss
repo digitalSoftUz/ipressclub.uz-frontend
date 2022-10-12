@@ -326,11 +326,11 @@ a{
       right: 0;
     }
     .search__btn{
-      margin: 0;
+      // margin: 0;
     }
     .burger__btnopen{
       display: inline-flex;
-      margin: 0;
+      // margin: 0;
       min-width: 30px;
     }
     .search__btn{
@@ -375,6 +375,17 @@ a{
   }
   .navbar{
     height: 70px;
+    nav{
+      grid-gap: 5px;
+    }
+    .search__btn{
+      margin: 0;
+      padding: 0;
+    }
+    .burger__btnopen{
+      margin: 0;
+      padding: 0;
+    }
     .logo{
       a{
         img{
@@ -385,6 +396,9 @@ a{
           font-size: 13px;
         }
       }
+    }
+    .go__live{
+      margin-left: 0;
     }
   }
 }
@@ -406,14 +420,18 @@ a{
     }
   }
 }
-@media (max-width:340px) {
+@media (max-width:352px) {
   .navbar{
     .logo{
       a{
+        img{
+          width: 45px;
+          height: 44px;
+        }
         p{
-          font-size: 11px;
+          font-size: 10px;
           span{
-            font-size: 12px;
+            font-size: 11px;
           }
         }
       }
