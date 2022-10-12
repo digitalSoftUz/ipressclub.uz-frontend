@@ -16,7 +16,7 @@ import { baseUrl } from "../../../contants";
 import { styled } from '@mui/material/styles';
 import { Cat_Data } from "../../../data/kengash";
 import  { tooltipClasses } from '@mui/material/Tooltip';
-import St_img from "../../../assets/images/safarlar/5.jpg"
+import St_img from "../../../assets/icons/favicon.ico"
 
 const BootstrapTooltip = styled(({ className, ...props }) => (
   <Tooltip {...props} arrow classes={{ popper: className }} />
