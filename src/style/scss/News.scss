@@ -8,9 +8,22 @@
       grid-template-columns: 3fr 4fr;
       grid-gap: 30px;
       margin-bottom: 25px;
+      .news__image{
+        width: 100%;
+        height: 100%;
+        background: red;
+        // overflow: hidden;
+        &:hover{
+          img{
+            transform: scale(1.08);
+          }
+        }
+      }
       img{
         width: 100%;
-        height: auto;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.3s ease-in-out;
       }
       h5{
         font-style: normal;

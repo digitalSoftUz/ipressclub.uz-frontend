@@ -46,13 +46,3 @@
 .search__result a:hover {
   background: #ffffff;
 }
-
-.search__close__div {
-  background: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-}

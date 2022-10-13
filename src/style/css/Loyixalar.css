@@ -265,6 +265,8 @@
   max-width: 100%;
   max-height: 220px;
   margin-bottom: 10px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .loyiha__item h5 {
@@ -308,6 +310,11 @@
 
 .loyiha__item:hover h5, .loyiha__item:hover p {
   color: #ffffff;
+}
+
+.loyiha__item:hover img {
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
 }
 
 .pagination {

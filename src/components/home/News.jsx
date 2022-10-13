@@ -74,7 +74,7 @@ class News extends Component {
                         key={n.id} 
                         data-aos="fade-up"
                       >
-                        <div>
+                        <div className='news__image'>
                           <img src={baseUrl + n.img1} alt="" />
                         </div>
                         <div>

@@ -63,7 +63,9 @@ export const VideoDiv = styled.div`
     align-items: center;
     justify-content: center;
     transition: .4s;
-    
+    &:hover{
+        transform: scale(1.04);
+    }
 `
 export const AccardionDiv = styled.div`
     display: none;

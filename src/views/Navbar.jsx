@@ -135,20 +135,20 @@ const Navbar = (props) => {
                       <img src={Live} alt="" />
                       Live
                   </Button>
-                  <Button onClick={x.handleSearch_btn} className='search__btn'>
+                  <button onClick={x.handleSearch_btn} className='search__btn'>
                     {/* {x.search_btn ? <SearchIcon/> : <CloseIcon/>} */}
                     <SearchIcon color='action'/>
-                  </Button>
-                  <Button onClick={x.handleburger} className='burger__btnopen'>
+                  </button>
+                  <button onClick={x.handleburger} className='burger__btnopen'>
                     <MenuIcon color='action'/>
-                  </Button>
+                  </button>
                 </nav>
                 <div onClick={x.handleburger} className={x.burger ? "nav__shadow" : "nav__shadow shadow_show"}></div>
               </div>
             </div>
             </div>
             </div>
-            <div className={x.search_btn ? "search" : "search seach__open"}>
+            <div className={x.search_btn ? "search" : "search search__open"}>
               <Search newsAll={props.newsAll}/>
             </div>
           </React.Fragment>

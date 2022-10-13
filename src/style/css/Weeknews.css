@@ -66,6 +66,13 @@
 .w__item .news__image img {
   width: 200px;
   height: auto;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.w__item:hover .news__image img {
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
 }
 
 .w__item .news__infos {
